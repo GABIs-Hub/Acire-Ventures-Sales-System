@@ -6,9 +6,9 @@ export async function POST(request: NextRequest) {
   try {
     const body = await request.json();
 
-    console.log('[test-auth] request body:', body);
-
     const { step, email, password, name, otp } = body;
+
+    console.log('[test-auth] step:', step, 'email:', email);
 
     switch (step) {
       case 'sign-up':
